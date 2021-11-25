@@ -1,9 +1,9 @@
 name: metric
 
 on:
-  push:
-    branches:
-      [main]
+  # Schedule updates (each hour)
+  schedule: [{cron: "0 * * * *"}]
+  push: {branches: [main]}
   workflow_dispatch:
 
 jobs:
@@ -16,5 +16,6 @@ jobs:
     - name: Metrics embed
       uses: lowlighter/metrics@v3.16
       with:
+        token: ${{ secrets.METRICS_TOKEN }}
         plugin_isocalendar: yes
         plugin_isocalendar_duration: full-year # Display full year instead of half year
