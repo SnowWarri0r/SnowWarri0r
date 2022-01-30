@@ -2,7 +2,7 @@ name: metric
 
 on:
   # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{cron: "0 18 * * *"}]
   push: {branches: [main]}
   workflow_dispatch:
 
