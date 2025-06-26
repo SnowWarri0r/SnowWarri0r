@@ -8,13 +8,13 @@ on:
 
 jobs:
   my-job:
-    name: test
+    name: metric
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v1
     - name: Metrics embed
-      uses: lowlighter/metrics@v3.16
+      uses: lowlighter/metrics@v3.34
       with:
         token: ${{ secrets.METRICS_TOKEN }}
         plugin_isocalendar: yes
